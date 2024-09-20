@@ -3,6 +3,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 import BlurFadeText from "@/components/magicui/blur-fade-text";
 import { ProjectCard } from "@/components/project-card";
 import { ResumeCard } from "@/components/resume-card";
+import Skills from "@/components/Skills";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
@@ -12,6 +13,7 @@ import Markdown from "react-markdown";
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
+
   return (
     <main className="flex flex-col min-h-[100dvh] space-y-10">
       <section id="hero">
@@ -22,10 +24,10 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-bold tracking-tighter sm:text-5xl xl:text-6xl/none"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]} 👋`}
+                text={`Hi, I'm ${DATA.name.split(" ")[0]}...`}
               />
               <BlurFadeText
-                className="max-w-[600px] md:text-xl"
+                className="max-w-[600px] md:text-xl prose text-pretty text-muted-foreground dark:prose-invert "
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
@@ -49,7 +51,7 @@ export default function Page() {
           </Markdown>
         </BlurFade>
       </section>
-      <section id="work">
+      {/* <section id="work">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 5}>
             <h2 className="text-xl font-bold">Work Experience</h2>
@@ -73,7 +75,7 @@ export default function Page() {
             </BlurFade>
           ))}
         </div>
-      </section>
+      </section> */}
       <section id="education">
         <div className="flex min-h-0 flex-col gap-y-3">
           <BlurFade delay={BLUR_FADE_DELAY * 7}>
@@ -86,8 +88,6 @@ export default function Page() {
             >
               <ResumeCard
                 key={education.school}
-                href={education.href}
-                logoUrl={education.logoUrl}
                 altText={education.school}
                 title={education.school}
                 subtitle={education.degree}
@@ -97,20 +97,7 @@ export default function Page() {
           ))}
         </div>
       </section>
-      <section id="skills">
-        <div className="flex min-h-0 flex-col gap-y-3">
-          <BlurFade delay={BLUR_FADE_DELAY * 9}>
-            <h2 className="text-xl font-bold">Skills</h2>
-          </BlurFade>
-          <div className="flex flex-wrap gap-1">
-            {DATA.skills.map((skill, id) => (
-              <BlurFade key={skill} delay={BLUR_FADE_DELAY * 10 + id * 0.05}>
-                <Badge key={skill}>{skill}</Badge>
-              </BlurFade>
-            ))}
-          </div>
-        </div>
-      </section>
+          <Skills/>
       <section id="projects">
         <div className="space-y-12 w-full py-12">
           <BlurFade delay={BLUR_FADE_DELAY * 11}>
