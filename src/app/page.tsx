@@ -204,6 +204,7 @@ export default function Page() {
                 soliciting.
               </p>
             </div>
+            <span className="underline underline-offset-4 ">Built with <a href="https://magicui.design/docs/templates/portfolio">Magic UI</a></span>
           </BlurFade>
         </div>
       </section>
