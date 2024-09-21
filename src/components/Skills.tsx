@@ -22,7 +22,10 @@ const Skills = () => {
       <div className="flex flex-wrap gap-1">
         {
             // eslint-disable-next-line @next/next/no-img-element
-            icon && <img src={icon}  alt="Skill Icons" style={{ width: '100%', height: 'auto' }} />
+            icon && 
+            <BlurFade delay={BLUR_FADE_DELAY * 10 + 1 * 0.05}>
+            <img src={icon} alt="Skill Icons" style={{ width: '100%', height: 'auto' }} />
+            </BlurFade>
 
         }
         {!icon && DATA.skills.map((skill, id) => (
