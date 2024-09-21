@@ -1,17 +1,15 @@
 "use client"
 import React from 'react'
-import Link from "next/link";
-import { useEffect, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { DATA } from "@/data/resume";
 import BlurFade from "@/components/magicui/blur-fade";
-import Image from 'next/image';
 
 
 const BLUR_FADE_DELAY = 0.04;
+const perLine = window.innerWidth <= 768 ? 8 : 12;
 
 const Skills = () => {
-    const icon = `https://skillicons.dev/icons?i=${DATA.skillicons}` || null;
+    const icon = `https://skillicons.dev/icons?i=${DATA.skillicons}&perline=${perLine}` || null;
 
   return (
     <section id="skills">
@@ -19,7 +17,7 @@ const Skills = () => {
       <BlurFade delay={BLUR_FADE_DELAY * 9}>
         <h2 className="text-xl font-bold">Skills</h2>
       </BlurFade>
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-1 items-center">
         {
             // eslint-disable-next-line @next/next/no-img-element
             icon && 
