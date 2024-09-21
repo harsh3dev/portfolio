@@ -1,6 +1,6 @@
 import { Dock, DockIcon } from "@/components/magicui/dock";
 import { ModeToggle } from "@/components/mode-toggle";
-import { buttonVariants } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import {
   Tooltip,
@@ -9,7 +9,9 @@ import {
 } from "@/components/ui/tooltip";
 import { DATA } from "@/data/resume";
 import { cn } from "@/lib/utils";
+import { Download } from "lucide-react";
 import Link from "next/link";
+import { Icons } from "./icons";
 
 export default function Navbar() {
   return (
@@ -60,6 +62,27 @@ export default function Navbar() {
             </DockIcon>
           ))}
         <Separator orientation="vertical" className="h-full py-2" />
+        <DockIcon className="group">
+          <Tooltip>
+            <TooltipTrigger asChild>
+            <Link
+              href={'/Resume.pdf'}
+              legacyBehavior
+              className={cn(
+                buttonVariants({ variant: "ghost", size: "icon" }),
+                "size-12"
+              )}
+            >
+              <a download>
+                <Icons.download title="Download Resume" className="size-4 group-hover:size-5" />
+              </a>
+            </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>{"Download Resume"}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
         <DockIcon>
           <Tooltip>
             <TooltipTrigger asChild>
