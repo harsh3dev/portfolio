@@ -6,7 +6,7 @@ import BlurFade from "@/components/magicui/blur-fade";
 
 
 const BLUR_FADE_DELAY = 0.04;
-const perLine = window.innerWidth <= 768 ? 8 : 12;
+const perLine = 770 <= 768 ? 8 : 12;
 
 const Skills = () => {
     const icon = `https://skillicons.dev/icons?i=${DATA.skillicons}&perline=${perLine}` || null;
