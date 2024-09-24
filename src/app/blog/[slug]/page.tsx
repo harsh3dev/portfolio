@@ -65,7 +65,7 @@ export default async function Blog({
   }
 
   return (
-    <div  className=" relative w-full min-h-screen flex flex-col justify-start items-center gap-5 py-10 ">
+    <div  className=" relative w-full min-h-screen flex flex-col justify-start items-center gap-5 px-10 py-10 ">
       <section id="blog max-w-2xl w-full mx-auto ">
         <script
           type="application/ld+json"

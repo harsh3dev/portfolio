@@ -13,7 +13,7 @@ export default async function BlogPage() {
   const posts = await getBlogPosts();
 
   return (
-    <div className=" relative w-full min-h-screen flex flex-col justify-start items-center gap-5 py-10 ">
+    <div className=" relative w-full min-h-screen flex flex-col justify-start items-center gap-5 px-10 py-10 ">
       <section className="w-full max-w-2xl">
         <BlurFade delay={BLUR_FADE_DELAY}>
           <h1 className="font-medium text-2xl mb-8 tracking-tighter">blog</h1>
