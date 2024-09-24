@@ -79,7 +79,7 @@ export const DATA = {
   "projects": [
     {
       "title": "WroteUs",
-      href: "https://chatcollect.com",
+      href: "https://wrote-us.vercel.app",
       "dates": "Feb 2024 - March 2024",
       "description": "Developed a real-time collaborative whiteboard platform using Next.js, Redux Toolkit, Socket.IO, and HTML Canvas for drawing features.",
       "technologies": ["Next.js", "Redux Toolkit", "Socket.IO", "Node.js", "Tailwind CSS"],
@@ -96,11 +96,11 @@ export const DATA = {
         }
       ],
       image: "",
-      video: "",
+      video: "/wroteusvideo - Trim.mp4",
     },
     {
       "title": "TickrNet",
-      href: "https://chatcollect.com",
+      href: "",
       "dates": "July 2024 - Aug 2024",
       "description": "Built a decentralized ticketing platform using Solidity and Hardhat on Avalanche Fuji Testnet.",
       "technologies": ["Next.js", "Solidity", "Hardhat", "Web3.js", "Redux Toolkit", "Tailwind CSS"],
@@ -112,11 +112,11 @@ export const DATA = {
         }
       ],
       image: "",
-      video: "",
+      video: "/tickernetvideo.mp4",
     },
     {
       "title": "DevMatchups",
-      href: "https://chatcollect.com",
+      href: "https://devmatchups.vercel.app",
       "dates": "Aug 2024 - Present",
       "description": "Developed a platform to connect developers worldwide for hackathons. Integrated Next Auth with Google and GitHub.",
       "technologies": ["Next.js", "Prisma ORM", "PostgreSQL", "Redis", "Zod", "Redux Toolkit"],
@@ -133,11 +133,33 @@ export const DATA = {
           icon: <Icons.globe className="size-3" />,
         }
       ],
-      image: "",
+      image: "/devmatchupsimg.png",
       video: "",
     }
   ],
   hackathons: [
+        {
+          title: "Buildspace S5",
+          dates: "June 5th - Aug 31st, 2024",
+          location: "Online",
+          description:
+            "Participated in the Buildspace S5 cohort, building full-stack web applications using Next.js, Prisma, and PostgreSQL.",
+          image:
+            "/buildspace.jpg",
+          mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+          links: [
+            {
+              title: "GitHub",
+              href: "https://github.com/harsh3dev/devmatchups",
+              icon: <Icons.github className="size-3" />,
+            },
+            {
+              title: "Website",
+              href: "https://devmatchups.vercel.app",
+              icon: <Icons.globe className="size-3" />,
+            },
+          ],
+        },
         {
           title: "Hack4Bengal 3.0",
           dates: "June 28rd - 30th, 2024",
