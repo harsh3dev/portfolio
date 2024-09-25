@@ -4,7 +4,6 @@ export default function Page() {
 
   return (
     <div className=" relative w-full min-h-screen grid place-items-center py-10 px-10 ">
-      
       <Main/>
     </div>
   );
