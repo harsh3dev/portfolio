@@ -157,6 +157,23 @@ export const DATA = {
   ],
   hackathons: [
         {
+          title: "IEM Hackoasis 1.0",
+          dates: "September 28th 2024",
+          location: "IEM Gurukul, Kolkata",
+          description:
+            "built an AI-Powered Cybersecurity Threat Detection Platform that monitors network traffic and detects potential cybersecurity threats in real-time.",
+          image:
+            "/hackoasis.png",
+          mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+          links: [
+            {
+              title: "GitHub",
+              href: "https://github.com/harsh3dev/hackoasis1",
+              icon: <Icons.github className="size-3" />,
+            },
+          ],
+        },
+        {
           title: "Buildspace S5",
           dates: "June 5th - Aug 31st, 2024",
           location: "Online",

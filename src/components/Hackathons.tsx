@@ -1,12 +1,19 @@
+"use client"
 import { HackathonCard } from "@/components/hackathon-card";
 import BlurFade from "@/components/magicui/blur-fade";
 import { DATA } from "@/data/resume";
+import { cn } from "@/lib/utils";
+import { useState } from "react";
+import { Button } from "./ui/button";
 const BLUR_FADE_DELAY = 0.04;
 
 
 const Hackathons = () => {
+    const [isOpen, setIsOpen] = useState(false);
+    const handleOpen = () => setIsOpen(!isOpen);
+    const HackathonData = isOpen ? DATA.hackathons : DATA.hackathons.slice(0, 3);
   return (
-      <section id="hackathons">
+      <section id="hackathons ">
           <div className="space-y-12 w-full py-12">
               <BlurFade delay={BLUR_FADE_DELAY * 13}>
                   <div className="flex flex-col items-center justify-center space-y-4 text-center">
@@ -29,8 +36,8 @@ const Hackathons = () => {
                   </div>
               </BlurFade>
               <BlurFade delay={BLUR_FADE_DELAY * 14}>
-                  <ul className="mb-4 ml-4 divide-y divide-dashed border-l">
-                      {DATA.hackathons.map((project, id) => (
+                  <ul className={cn(" ml-4 divide-y divide-dashed border-l ")}>
+                      {HackathonData.map((project, id) => (
                           <BlurFade
                               key={project.title + project.dates}
                               delay={BLUR_FADE_DELAY * 15 + id * 0.05}
@@ -47,6 +54,15 @@ const Hackathons = () => {
                       ))}
                   </ul>
               </BlurFade>
+                <div className=" w-full flex justify-center items-center -mt-12 ">
+                    <Button
+                        onClick={handleOpen}
+                        className=" underline-offset-4 hover:underline hover:bg-transparent "
+                        variant={'ghost'}
+                    >
+                        <span className=" font-mono text-sm ">{isOpen ? "Show Less" :  "Show all"} </span>
+                    </Button>
+                </div>
           </div>
       </section>
   )
