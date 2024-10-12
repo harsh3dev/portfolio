@@ -8,6 +8,7 @@ import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import { ToastContainer } from 'react-toastify';
 import { NextAuthProvider } from "./provider";
+import Script from 'next/script';
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -57,6 +58,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+    <head>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-KFDY05Y4VD"></Script>
+        <Script id="google-analytics">
+          {
+            `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-KFDY05Y4VD');`
+          }
+        </Script>
+    </head>
       <body
         className={cn(
           "min-h-screen w-full bg- font-sans antialiased ",
